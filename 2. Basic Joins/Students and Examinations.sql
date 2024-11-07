@@ -10,5 +10,6 @@ ORDER BY S.student_id, Sb.subject_name ASC
 
 -- CROSS JOIN with Subjects to show all the subjects 
 -- LEFT JOIN to show the nulls 0
+-- My submission was slow need to look at window function or CTE
 
 -- More challenging problem 3150, 512, 2010 
