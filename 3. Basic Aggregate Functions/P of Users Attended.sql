@@ -11,18 +11,18 @@ ORDER BY percentage DESC, R.contest_id ASC;
 -- Count total number of users participating in contests
 -- With CTE would be better or even temp tables
 
--- Step 1: Create a Temporary or Materialized View for Total Users Count
 
-CREATE TEMPORARY TABLE TotalUserCount AS 
-SELECT COUNT(*) AS total_users FROM Users;
 
--- Step 2: Use the Temporary Table in the Main Query
-
+WITH TotalUsers AS (
+    SELECT COUNT(*) AS total_users
+    FROM Users
+)
 SELECT R.contest_id,  
        ROUND(COUNT(DISTINCT R.user_id) * 100.0 / T.total_users, 2) AS percentage 
 FROM Register R
-CROSS JOIN TotalUserCount T
+JOIN TotalUsers T
 GROUP BY R.contest_id 
 ORDER BY percentage DESC, R.contest_id ASC;
+
 
 -- More challenging problems 1211
