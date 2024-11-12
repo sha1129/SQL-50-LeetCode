@@ -4,3 +4,7 @@ Just some queries from practice. The source is LeetCode. I am practicing to "sha
 - Select 
 - Basic 
 - Basic Aggregate Functions
+- Sorting and Grouping
+- Advanced Select and Joins
+- Subqueries
+- Advanced String Functions / Regex / Clause
