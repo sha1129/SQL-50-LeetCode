@@ -1,6 +1,5 @@
 -- Problem number 1204
 
-
 WITH totalW AS (
     SELECT turn, person_id, person_name, weight, 
         SUM(weight) OVER(ORDER BY turn) AS Total_weight
