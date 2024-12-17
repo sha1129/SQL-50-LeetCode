@@ -1,7 +1,5 @@
 -- Number 3198
 
-
-
 SELECT state, 
     GROUP_CONCAT( city ORDER BY city, SEPARATOR ', ') AS cities 
 from cities
